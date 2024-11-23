@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://github.com/CeKulit/cekulit-assets/blob/main/assets/app/app_logo_hd.png" alt="CeKulit Logo" width="300"/>
-  <p><i>Cloud Infrastructure and Backend Services for AI-Powered Skin Analysis</i></p>
+  <p><i>"Cloud Infrastructure and Backend Services for AI-Powered Skin Analysis"</i></p>
 </div>
 
 ## Contents
