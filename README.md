@@ -61,7 +61,7 @@ graph TB
 ### Core Technologies
 - Runtime: Node.js 18.x
 - Framework: Express.js
-- Database: Cloud SQL (PostgreSQL)
+- Database: Virtual Machine (PostgreSQL)
 - Authentication: Firebase Auth
 - Storage: Cloud Storage
 - Deployment: Cloud Run
@@ -319,7 +319,7 @@ Authorization: Bearer <firebase_token>
 │ Service            │ Purpose                │
 ├────────────────────┼────────────────────────┤
 │ Cloud Run          │ API hosting            │
-│ Cloud SQL          │ Database               │
+│ Virtual Machine    │ Database               │
 │ Cloud Storage      │ Image storage          │
 │ Cloud Functions    │ Serverless operations  │
 │ Cloud Build        │ CI/CD pipeline         │
