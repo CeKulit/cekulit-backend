@@ -46,7 +46,7 @@ graph TB
     end
     
     subgraph Database
-        F --> G[Cloud SQL]
+        F --> G[Virtual Machine]
         F --> H[Cloud Storage]
     end
     
