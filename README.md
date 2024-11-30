@@ -472,7 +472,7 @@ steps:
 ### Week 2: Core Development ✅
 - [x] Authentication implementation
 - [ ] ML model deployment
-- [x] API endpoint development
+- [ ] API endpoint development
 
 ### Week 3: Integration 🚧
 - [x] Mobile app integration
