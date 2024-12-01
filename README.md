@@ -475,7 +475,7 @@ steps:
 - [ ] API endpoint development
 
 ### Week 3: Integration 🚧
-- [x] Mobile app integration
+- [ ] Mobile app integration
 - [ ] Performance optimization
 - [ ] Security hardening
 
