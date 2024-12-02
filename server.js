@@ -1,11 +1,23 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({
+  path: path.join(__dirname, ".env"),
+});
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const db = require("./firebaseConfig");
 const nodemailer = require("nodemailer");
 
+const multer = require("multer");
+const { Storage } = require("@google-cloud/storage");
 const app = express();
+
+const storage = multer.memoryStorage(); // File akan disimpan di memory sementara
+const upload = multer({ storage });
+const gcs = new Storage({
+  keyFilename: path.join(__dirname, "gcp-credentials.json"),
+});
+const bucketName = "bucket-project21";
 
 app.use(express.json());
 app.use(
@@ -89,11 +101,17 @@ app.post("/register", async (req, res) => {
       password: hashedPassword,
       isVerified: false,
       otp,
+      avatarUrl:
+        "https://storage.googleapis.com/bucket-project21/edit-profile/avatar.png",
+      streak: 0,
+      lastHit: new Date().toISOString(),
     });
 
     sendOTP(email, otp);
 
-    res.status(201).json({ message: "User registered successfully." });
+    res
+      .status(201)
+      .json({ message: "User registered successfully, please verified OTP" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -269,35 +287,156 @@ app.get("/profile", authenticateToken, async (req, res) => {
   }
 });
 
-app.put("/profile", authenticateToken, async (req, res) => {
-  const { name, email } = req.body;
-
-  // Pastikan pengguna hanya memperbarui `name` atau `email`
-  if (!name && !email) {
-    return res.status(400).json({ message: "Name or email is required." });
-  }
-
+// Endpoint untuk upload gambar
+app.post("/upload", upload.single("file"), async (req, res) => {
   try {
-    // Ambil pengguna berdasarkan email dari JWT
-    const userEmail = req.user.email;
+    if (!req.file) {
+      return res.status(400).json({ error: "No file uploaded" });
+    }
+
+    const folderName = "edit-profile"; // Nama folder di dalam bucket
+    const fileName = `${folderName}/${Date.now()}-${req.file.originalname}`; // Path file dengan folder
+    const bucket = gcs.bucket(bucketName);
+    const blob = bucket.file(fileName);
+
+    // Mengupload file ke Google Cloud Storage
+    const blobStream = blob.createWriteStream({
+      resumable: false,
+      contentType: req.file.mimetype,
+    });
+
+    blobStream.on("error", (err) => {
+      console.error("Error uploading file:", err);
+      res.status(500).json({ error: "File upload failed" });
+    });
+
+    blobStream.on("finish", () => {
+      // Mengambil URL file yang sudah diupload
+      const fileUrl = `https://storage.googleapis.com/${bucketName}/edit-profile/${fileName}`;
+      res.status(200).json({ url: fileUrl });
+    });
+
+    blobStream.end(req.file.buffer);
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Endpoint untuk upload gambar
+app.put(
+  "/profile",
+  upload.single("avatar"),
+  authenticateToken,
+  async (req, res) => {
+    try {
+      const { name, age, gender } = req.body;
+      const avatar = req.file;
+
+      const userEmail = req.user.email;
+      const userDoc = await db.collection("users").doc(userEmail).get();
+
+      if (!userDoc.exists) {
+        return res.status(404).json({ message: "User not found." });
+      }
+
+      const updates = {};
+
+      const avatarUrlNow = userDoc.get("avatarUrl");
+
+      // Update field sesuai input
+      if (name) updates.name = name;
+      if (gender) updates.gender = gender;
+      if (age) updates.age = age;
+
+      if (avatar) {
+        const folderName = "edit-profile"; // Nama folder di dalam bucket
+        const fileName = `${folderName}/${Date.now()}-${req.file.originalname}`; // Path file dengan folder
+        const bucket = gcs.bucket(bucketName);
+        const blob = bucket.file(fileName);
+
+        // Mengupload file ke Google Cloud Storage
+        const blobStream = blob.createWriteStream({
+          resumable: false,
+          contentType: avatar.mimetype,
+        });
+
+        blobStream.on("error", (err) => {
+          console.error("Error uploading file:", err);
+          res.status(500).json({ error: "File upload failed" });
+        });
+
+        blobStream.on("finish", async () => {
+          // Mengambil URL file yang sudah diupload
+          updates.avatarUrl = `https://storage.googleapis.com/${bucketName}/${fileName}`;
+
+          // Update data pengguna di Firestore
+          await db.collection("users").doc(userEmail).update(updates);
+        });
+
+        blobStream.end(avatar.buffer);
+      } else {
+        updates.avatarUrl = null;
+        // Update data pengguna di Firestore
+        await db.collection("users").doc(userEmail).update(updates);
+      }
+
+      return res.status(200).json({
+        message: "Successfully update profile!",
+        avatarUrl: updates.avatarUrl || avatarUrlNow,
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  }
+);
+
+//Nambahin Streak
+app.post("/streak", authenticateToken, async (req, res) => {
+  try {
+    const userEmail = req.user.email; // Mendapatkan email pengguna dari token
     const userDoc = await db.collection("users").doc(userEmail).get();
 
     if (!userDoc.exists) {
       return res.status(404).json({ message: "User not found." });
     }
 
-    const updates = {};
+    const user = userDoc.data();
+    const now = new Date();
+    const lastUpdate = user.lastHit ? new Date(user.lastHit) : null;
 
-    // Update field sesuai input
-    if (name) updates.name = name;
-    if (email) updates.email = email;
+    if (lastUpdate) {
+      const timeDifference = now - lastUpdate; // Selisih waktu dalam milidetik
+      const hoursDifference = timeDifference / (1000 * 60 * 60); // Konversi ke jam
 
-    // Update data pengguna di Firestore
-    await db.collection("users").doc(userEmail).update(updates);
+      if (hoursDifference > 48) {
+        // Lebih dari 48 jam, reset streak
+        user.streak = 1;
+      } else {
+        // Kurang dari atau sama dengan 48 jam, tambahkan streak
+        user.streak += 1;
+      }
+    } else {
+      // Jika `lastHit` belum pernah diatur, mulai streak baru
+      user.streak = 1;
+    }
 
-    res.status(200).json({ message: "Profile updated successfully." });
+    // Perbarui timestamp terakhir dan streak di Firestore
+    await db.collection("users").doc(userEmail).update({
+      streak: user.streak,
+      lastHit: now.toISOString(),
+    });
+
+    // Kirim respons dengan data streak
+    res.status(200).json({
+      message: "Streak updated successfully.",
+      streak: user.streak,
+      lastHit: now,
+    });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error("Error updating streak:", error);
+    res.status(500).json({ message: "Internal server error." });
   }
 });
 
