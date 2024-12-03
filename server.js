@@ -144,7 +144,7 @@ app.post("/login", async (req, res) => {
     // Periksa password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return res.status(401).json({ message: "Invalid credentials." });
+      return res.status(401).json({ message: "Invalid password." });
     }
 
     // Buat token JWT
@@ -284,42 +284,6 @@ app.get("/profile", authenticateToken, async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
-  }
-});
-
-// Endpoint untuk upload gambar
-app.post("/upload", upload.single("file"), async (req, res) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ error: "No file uploaded" });
-    }
-
-    const folderName = "edit-profile"; // Nama folder di dalam bucket
-    const fileName = `${folderName}/${Date.now()}-${req.file.originalname}`; // Path file dengan folder
-    const bucket = gcs.bucket(bucketName);
-    const blob = bucket.file(fileName);
-
-    // Mengupload file ke Google Cloud Storage
-    const blobStream = blob.createWriteStream({
-      resumable: false,
-      contentType: req.file.mimetype,
-    });
-
-    blobStream.on("error", (err) => {
-      console.error("Error uploading file:", err);
-      res.status(500).json({ error: "File upload failed" });
-    });
-
-    blobStream.on("finish", () => {
-      // Mengambil URL file yang sudah diupload
-      const fileUrl = `https://storage.googleapis.com/${bucketName}/edit-profile/${fileName}`;
-      res.status(200).json({ url: fileUrl });
-    });
-
-    blobStream.end(req.file.buffer);
-  } catch (error) {
-    console.error("Error:", error);
-    res.status(500).json({ error: "Internal server error" });
   }
 });
 
