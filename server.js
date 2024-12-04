@@ -315,7 +315,9 @@ app.put(
 
       if (avatar) {
         const folderName = "edit-profile"; // Nama folder di dalam bucket
-        const fileName = `${folderName}/${Date.now()}-${req.file.originalname}`; // Path file dengan folder
+        const fileName = `${folderName}/${Date.now()}-${req.file.originalname
+          .split(" ")
+          .join("_")}`; // Path file dengan folder
         const bucket = gcs.bucket(bucketName);
         const blob = bucket.file(fileName);
 
@@ -336,19 +338,22 @@ app.put(
 
           // Update data pengguna di Firestore
           await db.collection("users").doc(userEmail).update(updates);
+
+          return res.status(200).json({
+            message: "Successfully update profile!",
+            avatarUrl: updates.avatarUrl,
+          });
         });
 
         blobStream.end(avatar.buffer);
       } else {
-        updates.avatarUrl = null;
-        // Update data pengguna di Firestore
         await db.collection("users").doc(userEmail).update(updates);
-      }
 
-      return res.status(200).json({
-        message: "Successfully update profile!",
-        avatarUrl: updates.avatarUrl || avatarUrlNow,
-      });
+        return res.status(200).json({
+          message: "Successfully update profile!",
+          avatarUrl: avatarUrlNow,
+        });
+      }
     } catch (error) {
       console.error("Error:", error);
       res.status(500).json({ error: "Internal server error" });
