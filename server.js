@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const db = require("./firebaseConfig");
 const nodemailer = require("nodemailer");
-
+const { v4: uuidv4 } = require("uuid");
 const multer = require("multer");
 const { Storage } = require("@google-cloud/storage");
 const app = express();
@@ -91,11 +91,12 @@ app.post("/register", async (req, res) => {
 
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
-
+    const userId = uuidv4();
     const otp = Math.floor(1000 + Math.random() * 9000).toString();
 
     // Simpan pengguna ke Firestore
     await db.collection("users").doc(email).set({
+      userId,
       name,
       email,
       password: hashedPassword,
@@ -152,7 +153,7 @@ app.post("/login", async (req, res) => {
       expiresIn: "1h",
     });
 
-    res.status(200).json({ token });
+    res.status(200).json({ userId: user.userId, token: token });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
