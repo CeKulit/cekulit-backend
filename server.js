@@ -11,7 +11,7 @@ const { v4: uuidv4 } = require("uuid");
 const multer = require("multer");
 const { Storage } = require("@google-cloud/storage");
 const app = express();
-
+const validator = require("email-validator");
 const storage = multer.memoryStorage(); // File akan disimpan di memory sementara
 const upload = multer({ storage });
 const gcs = new Storage({
@@ -79,6 +79,16 @@ app.post("/register", async (req, res) => {
     return res
       .status(400)
       .json({ message: "Name, email and password are required." });
+  }
+
+  if (!validator.validate(email)) {
+    return res.status(400).json({ message: "Invalid email format." });
+  }
+
+  if (password.length < 8) {
+    return res
+      .status(400)
+      .json({ message: "Password must be at least 8 characters long." });
   }
 
   try {
