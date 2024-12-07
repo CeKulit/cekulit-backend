@@ -481,7 +481,7 @@ steps:
 
 ### Week 4: Testing and Deployment 📋
 - [ ] Load testing
-- [ ] Documentation completion
+- [x] Documentation completion
 - [ ] Production deployment
 
 ## Contributors
