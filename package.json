@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/storage": "^7.14.0",
+    "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0",
     "dotenv": "^16.4.5",
     "email-validator": "^2.0.4",
     "express": "^4.21.1",

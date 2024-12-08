@@ -11,7 +11,8 @@ const { v4: uuidv4 } = require("uuid");
 const multer = require("multer");
 const { Storage } = require("@google-cloud/storage");
 const validator = require("email-validator");
-const skincareRouter = require("./detail-skincare");
+const skincareRoute = require("./skincare-route");
+const productRoute = require("./product-route");
 
 const app = express();
 const storage = multer.memoryStorage(); // File akan disimpan di memory sementara
@@ -425,7 +426,8 @@ app.post("/streak", authenticateToken, async (req, res) => {
   }
 });
 
-app.use("/sc", skincareRouter);
+app.use("/sc", skincareRoute);
+app.use("/data", productRoute);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
