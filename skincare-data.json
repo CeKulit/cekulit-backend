@@ -1,0 +1,98 @@
+{
+  "oily": {
+    "facewash": {
+      "desc": "description for oily",
+      "ingredients": "ingredients for oily",
+      "step": "how to use for oily"
+    },
+    "cleanser": {
+      "desc": "description for oily",
+      "ingredients": "ingredients for oily",
+      "step": "how to use for oily"
+    },
+    "moisturizer": {
+      "desc": "description for oily",
+      "ingredients": "ingredients for oily",
+      "step": "how to use for oily"
+    },
+    "serum": {
+      "desc": "description for oily",
+      "ingredients": "ingredients for oily",
+      "step": "how to use for oily"
+    },
+    "sunscreen": {
+      "desc": "description for oily",
+      "ingredients": "ingredients for oily",
+      "step": "how to use for oily"
+    },
+    "toner": {
+      "desc": "description for oily",
+      "ingredients": "ingredients for oily",
+      "step": "how to use for oily"
+    }
+  },
+  "dry": {
+    "facewash": {
+      "desc": "description for dry",
+      "ingredients": "ingredients for dry",
+      "step": "how to use for dry"
+    },
+    "cleanser": {
+      "desc": "description for dry",
+      "ingredients": "ingredients for dry",
+      "step": "how to use for dry"
+    },
+    "moisturizer": {
+      "desc": "description for dry",
+      "ingredients": "ingredients for dry",
+      "step": "how to use for dry"
+    },
+    "serum": {
+      "desc": "description for dry",
+      "ingredients": "ingredients for dry",
+      "step": "how to use for dry"
+    },
+    "sunscreen": {
+      "desc": "description for dry",
+      "ingredients": "ingredients for dry",
+      "step": "how to use for dry"
+    },
+    "toner": {
+      "desc": "description for dry",
+      "ingredients": "ingredients for dry",
+      "step": "how to use for dry"
+    }
+  },
+  "normal": {
+    "facewash": {
+      "desc": "description for normal",
+      "ingredients": "ingredients for normal",
+      "step": "how to use for normal"
+    },
+    "cleanser": {
+      "desc": "description for normal",
+      "ingredients": "ingredients for normal",
+      "step": "how to use for normal"
+    },
+    "moisturizer": {
+      "desc": "description for normal",
+      "ingredients": "ingredients for normal",
+      "step": "how to use for normal"
+    },
+    "serum": {
+      "desc": "description for normal",
+      "ingredients": "ingredients for normal",
+      "step": "how to use for normal"
+    },
+    "sunscreen": {
+      "desc": "description for normal",
+      "ingredients": "ingredients for normal",
+      "step": "how to use for normal"
+    },
+    "toner": {
+      "desc": "description for normal",
+      "ingredients": "ingredients for normal",
+      "step": "how to use for normal"
+    }
+  }
+}

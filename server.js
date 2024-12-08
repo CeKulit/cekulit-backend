@@ -10,8 +10,10 @@ const nodemailer = require("nodemailer");
 const { v4: uuidv4 } = require("uuid");
 const multer = require("multer");
 const { Storage } = require("@google-cloud/storage");
-const app = express();
 const validator = require("email-validator");
+const skincareRouter = require("./detail-skincare");
+
+const app = express();
 const storage = multer.memoryStorage(); // File akan disimpan di memory sementara
 const upload = multer({ storage });
 const gcs = new Storage({
@@ -187,7 +189,7 @@ app.post("/otp", async (req, res) => {
 
     const user = userDoc.data();
 
-    if (user.isVerified) {
+    if (user.isVerified && !user.is_reset_password) {
       return res.status(500).json({ message: "User has been verified." });
     }
 
@@ -227,6 +229,7 @@ app.post("/forget-password", async (req, res) => {
     // Update OTP di database
     await db.collection("users").doc(email).update({
       otp,
+      is_reset_password: true,
     });
 
     sendOTP(email, otp); // Kirim OTP ke email
@@ -239,12 +242,12 @@ app.post("/forget-password", async (req, res) => {
 
 // Endpoint untuk mengubah password
 app.post("/reset-password", async (req, res) => {
-  const { email, otp, newPassword } = req.body;
+  const { email, newPassword } = req.body;
 
-  if (!email || !otp || !newPassword) {
+  if (!email || !newPassword) {
     return res
       .status(400)
-      .json({ message: "Email, OTP, and new password are required." });
+      .json({ message: "Email and new password are required." });
   }
 
   try {
@@ -257,8 +260,10 @@ app.post("/reset-password", async (req, res) => {
 
     const user = userDoc.data();
 
-    if (user.otp != otp) {
-      return res.status(403).json({ message: "Invalid OTP." });
+    if (!user.is_reset_password || user.otp != null) {
+      return res
+        .status(500)
+        .json({ message: "User not have access to resetting password." });
     }
 
     // Hash password baru
@@ -267,7 +272,7 @@ app.post("/reset-password", async (req, res) => {
     // Update password di database
     await db.collection("users").doc(email).update({
       password: hashedPassword,
-      otp: null, // Hapus OTP setelah digunakan
+      is_reset_password: false,
     });
 
     res.status(200).json({ message: "Password successfully reset." });
@@ -419,6 +424,8 @@ app.post("/streak", authenticateToken, async (req, res) => {
     res.status(500).json({ message: "Internal server error." });
   }
 });
+
+app.use("/sc", skincareRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
