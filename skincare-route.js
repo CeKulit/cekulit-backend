@@ -15,7 +15,21 @@ function getListSkincare(time) {
     delete data["cleanser"];
   }
 
-  return Object.keys(data).map(capitalize);
+  temp_data = Object.keys(data);
+
+  data = [];
+
+  temp_data.forEach((d) => {
+    data.push({
+      title: capitalize(d),
+      photoUrl:
+        "https://storage.googleapis.com/bucket-project21/skincare/" +
+        d +
+        ".png",
+    });
+  });
+
+  return data;
 }
 
 function getDetailSkincare(skin_type, time) {
