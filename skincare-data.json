@@ -1,23 +1,23 @@
 {
   "oily": {
     "facewash": {
-      "desc": "description for oily",
-      "ingredients": "ingredients for oily",
-      "step": "how to use for oily"
+      "desc": "If you have oily skin, your skin might have cross the lines for normal sebum production. Generally, either gel or foaming face wash.",
+      "ingredients": "Here is what you might need in your face wash: Salicylic acid: A beta hydroxy acid (BHA) that penetrates pores to exfoliate and treat acne, Glycolic acid: An alpha hydroxy acid that reduces excess oil and prevents clogged pores, Niacinamide: Regulates oil production, balances moisture levels, and can help with blemishes, enlarged pores, and uneven skin tone, Retinol: Accelerates cell turnover to remove dead skin cells and prevent clogged pores, Benzoyl peroxide: Helps clear blemishes and prevent new ones from forming, Ceramides: Naturally occurring lipids in the skin that help keep it hydrated, Apple cider vinegar: Absorbs excess oil production and removes dead skin and impurities ",
+      "step": "1. Wet your face with water, preferrably lukewarm 2. Apply small amount of the face wash (if it is foaming, you might need to rub it slightly on your arms) 3. Massage it on your face in circular motion 4. Rinse thoroughly with clean water 5. Do this twice a day"
     },
     "cleanser": {
-      "desc": "description for oily",
-      "ingredients": "ingredients for oily",
-      "step": "how to use for oily"
+      "desc": "This part is optional, but if you want to transform your skin even further, we recommend you to have a cleanser as well, such as micellar water, etc.",
+      "ingredients": "Here is what you might need in your cleanser: Salicylic acid: A beta hydroxy acid (BHA) that penetrates pores to exfoliate and treat acne, Glycolic acid: An alpha hydroxy acid that reduces excess oil and prevents clogged pores, Niacinamide: Regulates oil production, balances moisture levels, and can help with blemishes, enlarged pores, and uneven skin tone, Benzoyl peroxide: Helps clear blemishes and prevent new ones from forming  ",
+      "step": "wet your face with lukewarm water, apply a small amount of cleanser to your hands, gently massage it into your face using circular motions, focusing on the T-zone, and then rinse thoroughly with lukewarm water, patting your face dry with a clean towel."
     },
     "moisturizer": {
-      "desc": "description for oily",
-      "ingredients": "ingredients for oily",
-      "step": "how to use for oily"
+      "desc": "For your moisturizer, we recommend something that is oil-and-grease-free, non-comedogenic moisturizer. Because if it is oily, wouldn't your oily skin problem stay?",
+      "ingredients": "Hyaluronic acid: A humectant that draws moisture from the air into the skin to hydrate without feeling greasy, Niacinamide: Regulates oil production, balances moisture levels, and can help with blemishes, enlarged pores, and uneven skin tone Salicylic acid: A beta-hydroxy acid (BHA) that exfoliates dead skin cells and unclogs pores, Retinol: An anti-aging ingredient that accelerates cell turnover to remove dead skin cells and prevent clogged pores, Aloe vera: Moisturizes and soothes the skin while reducing the chances of acne, Sunflower oil: Contains linoleic acid, which hydrates the skin and strengthens the skin barrier, Glycolic acid: An alpha hydroxy acid that exfoliates the skin to remove dead skin cells and excess oil, Tea tree oil: Has antibacterial properties that can help control acne-causing bacteria and reduce inflammation and redness",
+      "step": "cleanse your face thoroughly, then apply a small amount of moisturizer to your damp skin, gently patting it in to absorb excess product"
     },
     "serum": {
       "desc": "description for oily",
-      "ingredients": "ingredients for oily",
+      "ingredients": " Niacinamide: Regulates oil production, balances moisture levels, and can help with blemishes, enlarged pores, and uneven skin tone, Salicylic acid: A beta-hydroxy acid (BHA) that exfoliates dead skin cells and unclogs pores, Tea tree oil: Has antibacterial properties that can help control acne-causing bacteria and reduce inflammation and redness, Glycolic acid: An alpha hydroxy acid that exfoliates the skin to remove dead skin cells and excess oil, Aloe vera: Moisturizes and soothes the skin while reducing the chances of acne, Zinc PCA: Helps control sebum production and reduces acne formation, Witch hazel: A natural astringent that tightens pores and reduces oiliness, Retinol: An anti-aging ingredient that accelerates cell turnover to remove dead skin cells and prevent clogged pores",
       "step": "how to use for oily"
     },
     "sunscreen": {
