@@ -45,26 +45,32 @@ async function scrape() {
       dataCare.push(product);
     });
 
-    return dataCare;
+    return Promise.resolve(dataCare);
   } catch (error) {
     console.error("Error:", error);
-    return [];
+    return Promise.resolve([]);
   }
 }
 
-router.get("/", async (req, res) => {
-  const query = req.query.q?.toLowerCase() || "";
+scrape().then((products) => {
+  router.get("/", async (req, res) => {
+    const query = req.query.q?.toLowerCase() || "";
+    const desc = req.query.desc?.toLowerCase() || "";
 
-  const products = await scrape();
-
-  if (query) {
-    const filteredProducts = products.filter((product) =>
-      product.title.toLowerCase().includes(query)
-    );
-    res.json(filteredProducts);
-  } else {
-    res.json(products);
-  }
+    if (query) {
+      const filteredProducts = products.filter((product) =>
+        product.title.toLowerCase().includes(query)
+      );
+      res.json(filteredProducts);
+    } else if (desc) {
+      const filteredProducts = products.filter((product) =>
+        product.desc.toLowerCase().includes(desc)
+      );
+      res.json(filteredProducts);
+    } else {
+      res.json(products);
+    }
+  });
 });
 
 module.exports = router;
