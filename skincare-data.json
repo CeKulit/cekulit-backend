@@ -33,66 +33,66 @@
   },
   "dry": {
     "facewash": {
-      "desc": "description for dry",
-      "ingredients": "ingredients for dry",
-      "step": "how to use for dry"
+      "desc": "Face wash for dry skin usually consists of something that hydrates and soothe skin without stripping its natural oils.",
+      "ingredients": "Hyaluronic Acid: A natural humectant that attracts and retains moisture, leaving skin feeling plump and hydrated. Glycerin: Draws moisture from the environment to the skin, acting as a powerful moisturizer. Ceramides: Naturally occurring lipids in the skin that help maintain a healthy skin barrier, preventing moisture loss. Aloe Vera: Soothing and hydrating, helps to calm irritation and redness. Cucumber: High water content provides excellent hydration and refreshes the skin ",
+      "step": "1. Wet your face with water, preferrably lukewarm 2. Apply small amount of the face wash (if it is foaming, you might need to rub it slightly on your arms) 3. Massage it on your face in circular motion 4. Rinse thoroughly with clean water 5. Do this twice a day"
     },
     "cleanser": {
-      "desc": "description for dry",
-      "ingredients": "ingredients for dry",
-      "step": "how to use for dry"
+      "desc": "Similar to face wash, cleanser is needed to clean your face, again, without stripping natural oils. Or you can just simply use micellar water for this. It's hydrating enough.",
+      "ingredients": "Hyaluronic Acid: A natural humectant that attracts and retains moisture, leaving skin feeling plump and hydrated. Glycerin: Draws moisture from the environment to the skin, acting as a powerful moisturizer. Ceramides: Naturally occurring lipids in the skin that help maintain a healthy skin barrier, preventing moisture loss. Aloe Vera: Soothing and hydrating, helps to calm irritation and redness.",
+      "step": "wet your face with lukewarm water, apply a small amount of cleanser to your hands, gently massage it into your face using circular motions, focusing on the T-zone, and then rinse thoroughly with lukewarm water, patting your face dry with a clean towel."
     },
     "moisturizer": {
-      "desc": "description for dry",
-      "ingredients": "ingredients for dry",
-      "step": "how to use for dry"
+      "desc": "Basically, this is what you really need for your dry skin. It is hydrating.",
+      "ingredients": "Humectants: Attract and retain water in the skin, such as hyaluronic acid, glycerin, and aloe vera Emollients: Lubricate the skin to prevent water loss and improve the skin's texture, such as shea butter, coconut oil, and ceramides Occlusives: Create a protective layer on the skin to prevent moisture loss, such as beeswax and squalane Urea: Can help hydrate the skin and restore the moisture content of nails Cucumber: Has a high water content and can have a moisturizing effect Aloe vera: Contains vitamins A, C, and E, as well as other active compounds ",
+      "step": "cleanse your face thoroughly, then apply a small amount of moisturizer to your damp skin, gently patting it in to absorb excess product"
     },
     "serum": {
-      "desc": "description for dry",
-      "ingredients": "ingredients for dry",
-      "step": "how to use for dry"
+      "desc": "Serums with hydrating ingredients are needed, so that your skin can regulate more sebum, making it less dry.",
+      "ingredients": "Hyaluronic acid: A humectant that draws moisture into the skin. Serums with multiple forms of hyaluronic acid can provide deeper hydration. Glycerin: A humectant that attracts and locks in moisture from the air and deeper layers of the skin. Ceramides: Strengthen the skin's barrier to prevent moisture loss. Squalane and jojoba oil: Emollients that soften and smooth the skin. Vitamin E: An antioxidant that can help soften the skin. Vitamin C: Promotes collagen formation, reduces oxidative damage, and decreases hyperpigmentation. Niacinamide: A form of vitamin B3 that can help brighten uneven skin tone and soothe inflammation. Peptides: Tiny proteins that can help reduce fine lines and wrinkles.",
+      "step": "cleanse your face thoroughly, then apply a small amount of serum specifically formulated for oily skin to your fingertips, gently patting it into your skin, focusing on areas with excess oil"
     },
     "sunscreen": {
-      "desc": "description for dry",
-      "ingredients": "ingredients for dry",
-      "step": "how to use for dry"
+      "desc": "While shielding you from UV rays, your sunscreen also need some hydrating and moisturizing elements.",
+      "ingredients": "Hyaluronic acid: A natural skin component that can hold up to a thousand times its weight in water. It attracts moisture from the environment and binds it to the skin. Glycerin: A humectant that draws moisture into the skin and helps retain it. It can improve skin smoothness. Ceramides: Help restore the skin barrier and lock in moisture. Aloe vera: Soothing and hydrating, aloe vera can help calm and moisturize dry, irritated skin. Shea butter: Provides hydration and shields the skin from UV rays. ",
+      "step": "cleanse your face thoroughly, apply moisturizer, apply your sunscreen and cover your face, neck, and ears area with it, rub it thoroughly, remember to reapply roughly 2-4 hours"
     },
     "toner": {
-      "desc": "description for dry",
-      "ingredients": "ingredients for dry",
-      "step": "how to use for dry"
+      "desc": "As this step is optional, you also want a toner with hydrating ingredients, too.",
+      "ingredients": "Hyaluronic acid: A humectant that attracts water molecules to keep skin hydrated Glycerin: A humectant that attracts water to keep skin hydrated and plump Ceramides: Lipids that help form the skin's barrier and retain moisture Aloe vera: A soothing ingredient that can help calm and hydrate dry skin Squalane: A lightweight, non-greasy oil that mimics the skin's natural oils Borage oil: Rich in essential fatty acids that nourish and moisturize the skin without causing irritation Niacinamide: A form of Vitamin B3 that improves skin hydration and brightens the skin Chamomile: Known for its soothing properties, chamomile reduces redness and calms irritation",
+      "step": "cleanse your face thoroughly, use cotton pad to apply toner to your face, remember to pour mindfully as too many toner will irritate your skin, follow up with moisturizer"
     }
   },
   "normal": {
     "facewash": {
-      "desc": "description for normal",
-      "ingredients": "ingredients for normal",
-      "step": "how to use for normal"
+      "desc": "As normal as your skin be, it might have some minor problems that can be worked around with certain face wash ingredients (i.e. something that fixes hyperpigmentation, evens out skin color, etc).",
+      "ingredients": "Retinol: A derivative of vitamin A that stimulates collagen production, which can reduce the appearance of wrinkles Salicylic acid: A beta-hydroxy acid that exfoliates the skin and unclogs pores Vitamin C: An antioxidant that brightens dull skin by inhibiting melanin production Glycerin: A humectant that draws moisture into the skin Ceramides: Naturally occurring lipids that help keep the skin hydrated and protected Hyaluronic acid: Helps replenish the skin while cleaning it Niacinamide: Provides a lipid barrier and minimizes redness and pore appearance Zinc PCA: Protects the skin's barrier while controlling oil production Vitamin E: An antioxidant that protects the skin from free radicals Amino acids: Plumps and moisturizes the skin",
+      "step": "wet your face with lukewarm water, apply a small amount of cleanser to your hands, gently massage it into your face using circular motions, focusing on the T-zone, and then rinse thoroughly with lukewarm water, patting your face dry with a clean towel."
     },
     "cleanser": {
-      "desc": "description for normal",
-      "ingredients": "ingredients for normal",
-      "step": "how to use for normal"
+      "desc": "This is needed to regulate skin barrier and balance for your skin",
+      "ingredients": "Hyaluronic acid: Helps maintain the skin's moisture balance. It's a humectant, which means it binds water to collagen to retain moisture. Ceramides: Helps restore the skin's natural barrier, which keeps moisture in and harmful elements out. Niacinamide: May help calm skin and increase moisture in the skin's uppermost layer. Squalane: A lightweight derivative of squalene that lubricates the skin and acts as an antioxidant. Seaweed: A natural ingredient rich in minerals and antioxidants that can purify and mattify the skin. ",
+      "step": "wet your face with lukewarm water, apply a small amount of cleanser to your hands, gently massage it into your face using circular motions, focusing on the T-zone, and then rinse thoroughly with lukewarm water, patting your face dry with a clean towel."
     },
     "moisturizer": {
-      "desc": "description for normal",
-      "ingredients": "ingredients for normal",
-      "step": "how to use for normal"
+      "desc": "It is simply needed to keep your face hydrated. It can also plump up your face.",
+      "ingredients": "Hyaluronic acid: A humectant that can hold up to a thousand times its weight in water. It can help restore moisture in cells, reduce the appearance of wrinkles, and speed up wound healing. Glycerin: A classic ingredient that draws moisture into the skin and helps promote a healthy skin barrier. Squalane: Mimics the skin's oils to leave the skin hydrated and soft. Shea butter: Works well when combined with another ingredient like glycerin. Petrolatum: Creates a protective coating over the skin to prevent water from evaporating. Antioxidants: Can help protect the skin's surface from environmental damage and the visible signs of aging.",
+      "step": "cleanse your face thoroughly, then apply a small amount of moisturizer to your damp skin, gently patting it in to absorb excess product"
     },
     "serum": {
-      "desc": "description for normal",
-      "ingredients": "ingredients for normal",
-      "step": "how to use for normal"
+      "desc": "Any serums can work with normal skin type. The determiner might be what does your skin need at the moment.",
+      "ingredients": "Hyaluronic Acid: Draws moisture into the skin, keeping it hydrated and plump. Vitamin C (L-ascorbic acid): Brightens the skin, evens out skin tone, and protects against free radical damage. Niacinamide (Vitamin B3): Improves skin texture, evens skin tone, and has anti-inflammatory properties. Peptides: Promote skin elasticity and can help with signs of aging. Glycolic Acid (in moderation): Gently exfoliates the skin, promoting cell turnover. ",
+      "step": "cleanse your face thoroughly, then apply a small amount of serum specifically formulated for oily skin to your fingertips, gently patting it into your skin, focusing on areas with excess oil"
     },
     "sunscreen": {
-      "desc": "description for normal",
-      "ingredients": "ingredients for normal",
-      "step": "how to use for normal"
+      "desc": "Sunscreen is always needed, whether you have normal skin or else. It keeps UV rays from damagin your skin.",
+      "ingredients": "Zinc oxide and titanium dioxide: These mineral sunblocks are non-toxic, hypoallergenic, and reef-safe. They create a physical barrier on the skin to reflect UV rays. Avobenzone: An active chemical ingredient that helps reflect UVA rays. Octocrylene and octisalate can help avobenzone remain effective. Shea butter: Can help prevent and heal sun damage. Carrot juice: Contains vitamin C, which can promote healing and increase melanin levels in the skin. Sunflower oil: Can help prevent skin irritation from sunburn and other irritants.",
+      "step": "cleanse your face thoroughly, apply moisturizer, apply your sunscreen and cover your face, neck, and ears area with it, rub it thoroughly, remember to reapply roughly 2-4 hours"
     },
     "toner": {
-      "desc": "description for normal",
-      "ingredients": "ingredients for normal",
-      "step": "how to use for normal"
+      "desc": "Some toner can help promote balance and maintain skin barrier for your skin.",
+      "ingredients": "Hyaluronic acid: A gentle exfoliant that removes dead skin cells and hydrates the skin Niacinamide: A form of vitamin B3 that brightens the skin Vitamin C: Stimulates collagen production to reduce the signs of aging and correct uneven skin tone Aloe vera: A moisturizer that soothes irritation, reduces inflammation, and accelerates healing Witch hazel: Contains tannins that can tighten pores and remove excess oil, but can exacerbate dry skin if overused",
+      "step": "cleanse your face thoroughly, use cotton pad to apply toner to your face, remember to pour mindfully as too many toner will irritate your skin, follow up with moisturizer"
     }
   }
 }
