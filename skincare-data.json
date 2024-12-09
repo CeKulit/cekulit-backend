@@ -16,9 +16,9 @@
       "step": "cleanse your face thoroughly, then apply a small amount of moisturizer to your damp skin, gently patting it in to absorb excess product"
     },
     "serum": {
-      "desc": "description for oily",
+      "desc": "You should opt for oil-controlling serum that can help tighten pores, hydrate skin and prevent acnes.",
       "ingredients": " Niacinamide: Regulates oil production, balances moisture levels, and can help with blemishes, enlarged pores, and uneven skin tone, Salicylic acid: A beta-hydroxy acid (BHA) that exfoliates dead skin cells and unclogs pores, Tea tree oil: Has antibacterial properties that can help control acne-causing bacteria and reduce inflammation and redness, Glycolic acid: An alpha hydroxy acid that exfoliates the skin to remove dead skin cells and excess oil, Aloe vera: Moisturizes and soothes the skin while reducing the chances of acne, Zinc PCA: Helps control sebum production and reduces acne formation, Witch hazel: A natural astringent that tightens pores and reduces oiliness, Retinol: An anti-aging ingredient that accelerates cell turnover to remove dead skin cells and prevent clogged pores",
-      "step": "how to use for oily"
+      "step": "cleanse your face thoroughly, then apply a small amount of serum specifically formulated for oily skin to your fingertips, gently patting it into your skin, focusing on areas with excess oil"
     },
     "sunscreen": {
       "desc": "description for oily",
