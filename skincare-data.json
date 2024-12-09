@@ -21,14 +21,14 @@
       "step": "cleanse your face thoroughly, then apply a small amount of serum specifically formulated for oily skin to your fingertips, gently patting it into your skin, focusing on areas with excess oil"
     },
     "sunscreen": {
-      "desc": "description for oily",
-      "ingredients": "ingredients for oily",
-      "step": "how to use for oily"
+      "desc": "Sunscreen is important to block our skin from harsh UV, but for oily skin, we need grease-free, non-comedogenic sunscreen.",
+      "ingredients": "Zinc oxide or titanium dioxide: These active ingredients are found in mineral sunscreens, which are generally more drying and better for oily skin. Zinc oxide can also help prevent breakouts by controlling oil production. Hyaluronic acid: This ingredient attracts and retains water, which can hydrate oily skin without making it feel greasy. Non-comedogenic: This means the sunscreen is formulated not to clog pores.",
+      "step": "cleanse your face thoroughly, apply moisturizer, apply your sunscreen and cover your face, neck, and ears area with it, rub it thoroughly, remember to reapply roughly 2-4 hours"
     },
     "toner": {
-      "desc": "description for oily",
-      "ingredients": "ingredients for oily",
-      "step": "how to use for oily"
+      "desc": "Toners are great for oily skin. They further hydrate and reduce oil from your skin.",
+      "ingredients": "Salicylic acid: A beta hydroxy acid (BHA) that can unclog pores, remove excess oil, and reduce blackheads and whiteheads. It also has anti-inflammatory properties that can help with redness and swelling. Niacinamide: Can help reduce sebum production. Benzoic acid: An antifungal and antibacterial ingredient that can help prevent acne-causing bacteria. Alpha hydroxy acids (AHAs): Gently exfoliate the skin and improve texture. Examples of AHAs include glycolic acid, mandelic acid, and lactic acid. Polyhydroxy acid (PHA): A gentler acid that can be used on any skin type, including oily skin. Hyaluronic acid: Deeply hydrates the skin. Aloe vera: Has antioxidant and anti-inflammatory properties and is soothing to the skin. ",
+      "step": "cleanse your face thoroughly, use cotton pad to apply toner to your face, remember to pour mindfully as too many toner will irritate your skin, follow up with moisturizer"
     }
   },
   "dry": {
