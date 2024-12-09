@@ -51,9 +51,9 @@ function getDetailSkincare(skin_type, time) {
 function getDetailSkincareByName(skin_type, time, name) {
   let data = structuredClone(skincareData[skin_type]);
   if (time === "night") {
-    delete data["sunscreen"];
+    delete data["Sunscreen"];
   } else if (time === "day") {
-    delete data["cleanser"];
+    delete data["Cleanser"];
   }
   data[name][
     "photoUrl"
