@@ -1,5 +1,5 @@
 {
- "oily": {
+ "berminyak": {
     "facewash": {
       "desc": "Jika Anda memiliki kulit berminyak, mungkin produksi sebum Anda sudah melebihi batas normal. Umumnya, gunakan face wash berbentuk gel atau foaming.",
       "ingredients": "Berikut bahan yang mungkin Anda perlukan dalam face wash: Salicylic acid: BHA (beta hydroxy acid) yang menembus pori-pori untuk eksfoliasi dan mengatasi jerawat, Glycolic acid: AHA (alpha hydroxy acid) yang mengurangi minyak berlebih dan mencegah pori-pori tersumbat, Niacinamide: Mengatur produksi minyak, menyeimbangkan kadar kelembapan, dan membantu mengatasi noda, pori-pori besar, dan warna kulit tidak merata, Retinol: Mempercepat pergantian sel untuk mengangkat sel kulit mati dan mencegah pori-pori tersumbat, Benzoyl peroxide: Membantu membersihkan jerawat dan mencegah terbentuknya jerawat baru, Ceramides: Lipid alami pada kulit yang membantu menjaga hidrasi, Apple cider vinegar: Menyerap minyak berlebih dan mengangkat sel kulit mati serta kotoran.",
@@ -31,7 +31,7 @@
       "step": "Bersihkan wajah secara menyeluruh, gunakan kapas untuk mengaplikasikan toner ke wajah, tuang secukupnya karena toner yang terlalu banyak bisa menyebabkan iritasi, lalu lanjutkan dengan moisturizer."
     }
   },
-  "dry": {
+  "kering": {
     "facewash": {
       "desc": "Face wash untuk kulit kering biasanya mengandung bahan yang melembapkan dan menenangkan kulit tanpa menghilangkan minyak alami.",
       "ingredients": "Hyaluronic Acid: Humektan alami yang menarik dan mempertahankan kelembapan, membuat kulit terasa kenyal dan terhidrasi. Glycerin: Menarik kelembapan dari lingkungan ke kulit, berfungsi sebagai pelembap yang kuat. Ceramides: Lipid alami yang membantu menjaga penghalang kulit yang sehat, mencegah kehilangan kelembapan. Aloe Vera: Menenangkan dan melembapkan, membantu meredakan iritasi dan kemerahan. Cucumber: Kandungan air yang tinggi memberikan hidrasi yang baik dan menyegarkan kulit.",
