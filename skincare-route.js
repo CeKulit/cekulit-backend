@@ -10,9 +10,9 @@ function capitalize(d) {
 function getListSkincare(time) {
   let data = structuredClone(skincareData["normal"]);
   if (time === "night") {
-    delete data["sunscreen"];
+    delete data["Sunscreen"];
   } else if (time === "day") {
-    delete data["cleanser"];
+    delete data["Cleanser"];
   }
 
   temp_data = Object.keys(data);
@@ -35,9 +35,9 @@ function getListSkincare(time) {
 function getDetailSkincare(skin_type, time) {
   let data = structuredClone(skincareData[skin_type]);
   if (time === "night") {
-    delete data["sunscreen"];
+    delete data["Sunscreen"];
   } else if (time === "day") {
-    delete data["cleanser"];
+    delete data["Cleanser"];
   }
   Object.keys(data).forEach((key) => {
     data[key][
