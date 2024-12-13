@@ -39,14 +39,14 @@ graph TB
     end
     
     subgraph Backend Services
-        B --> C[Cloud Run]
+        B --> C[Virtual Machine]
         C --> D[Authentication]
         C --> E[ML Model Service]
         C --> F[User Service]
     end
     
     subgraph Database
-        F --> G[Virtual Machine]
+        F --> G[Fire Store]
         F --> H[Cloud Storage]
     end
     
@@ -61,11 +61,11 @@ graph TB
 ### Core Technologies
 - Runtime: Node.js 18.x
 - Framework: Express.js
-- Database: Virtual Machine (PostgreSQL)
+- Database: Firestore
 - Authentication: Firebase Auth
 - Storage: Cloud Storage
-- Deployment: Cloud Run
-- ML Serving: TensorFlow Serving
+- Deployment: Virtual Machine
+- ML Serving: Flask
 
 ## Installation
 
@@ -99,16 +99,12 @@ npm run start
 
 | HTTP Method | Path | Description | Section |
 |------------|------|-------------|----------|
-| POST | /api/v1/auth/register | User registration | Authentication |
-| POST | /api/v1/auth/login | Login authorization | Authentication |
-| POST | /api/v1/auth/logout | Logout authorization | Authentication |
-| GET | /api/v1/users/profile | Get user profile | User |
-| PATCH | /api/v1/users/profile | Update user profile | User |
-| POST | /api/v1/analysis/skin-type | Process skin analysis | Analysis |
-| GET | /api/v1/analysis/history | Get analysis history | Analysis |
-| GET | /api/v1/analysis/{id} | Get specific analysis | Analysis |
-| GET | /api/v1/recommendations | Get all recommendations | Recommendations |
-| GET | /api/v1/recommendations/{skin_type} | Get skin-specific recommendations | Recommendations |
+| POST | /register | User registration | Authentication |
+| POST | /login | Login authorization | Authentication |
+| POST | /otp | One Time Password | Authentication |
+| GET | /profile | Get user profile | User |
+| PUT| /profile | Update user profile | User |
+| POST | /predict | Process skin analysis | Analysis |
 
 ## Endpoint Documentation
 
