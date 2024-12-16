@@ -11,10 +11,8 @@ skin-type-prediction/
 ├── templates/
 │   └── index.html          # Frontend HTML template
 │
-├── static/
-│   └── swagger.json        # Swagger API documentation
-│
-└── uploads/                # Temporary upload directory
+└── static/
+    └── swagger.json        # Swagger API documentation
 ```
 
 ## Setup and Installation
