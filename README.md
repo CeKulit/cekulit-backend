@@ -1,5 +1,5 @@
 # Skin Type Prediction API
-
+# test
 ## Project Structure
 ```
 skin-type-prediction/
