@@ -40,4 +40,5 @@ jobs:
             --platform managed \
             --region $REGION \
             --allow-unauthenticated \
-            --set-env-vars "BUCKET_NAME=${{ secrets.BUCKET_NAME }},UPLOAD_FOLDER=uploads/,MODEL_PATH=models/skin_type.pth"
+            --set-env-vars "BUCKET_NAME=${{ secrets.BUCKET_NAME }},UPLOAD_FOLDER=uploads/,MODEL_PATH=models/skin_type.pth" \
+            --service-account ${{ secrets.GCP_SA_EMAIL }}
