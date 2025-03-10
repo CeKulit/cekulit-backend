@@ -1,0 +1,99 @@
+{
+    "berminyak": {
+      "Facewash": {
+        "desc": "Jika Anda memiliki kulit berminyak, mungkin produksi sebum Anda sudah melebihi batas normal. Umumnya, gunakan face wash berbentuk gel atau foaming.",
+        "ingredients": "Berikut bahan yang mungkin Anda perlukan dalam face wash: Salicylic acid: BHA (beta hydroxy acid) yang menembus pori-pori untuk eksfoliasi dan mengatasi jerawat, Glycolic acid: AHA (alpha hydroxy acid) yang mengurangi minyak berlebih dan mencegah pori-pori tersumbat, Niacinamide: Mengatur produksi minyak, menyeimbangkan kadar kelembapan, dan membantu mengatasi noda, pori-pori besar, dan warna kulit tidak merata, Retinol: Mempercepat pergantian sel untuk mengangkat sel kulit mati dan mencegah pori-pori tersumbat, Benzoyl peroxide: Membantu membersihkan jerawat dan mencegah terbentuknya jerawat baru, Ceramides: Lipid alami pada kulit yang membantu menjaga hidrasi, Apple cider vinegar: Menyerap minyak berlebih dan mengangkat sel kulit mati serta kotoran.",
+        "step": "1. Basahi wajah Anda dengan air, sebaiknya hangat. 2. Gunakan sedikit face wash (untuk jenis foaming, mungkin perlu digosok sedikit di tangan). 3. Pijat wajah dengan gerakan melingkar. 4. Bilas bersih dengan air bersih. 5. Lakukan ini dua kali sehari."
+      },
+      "Cleanser": {
+        "desc": "Langkah ini opsional, tetapi jika Anda ingin hasil kulit lebih optimal, kami sarankan menggunakan cleanser seperti micellar water.",
+        "ingredients": "Berikut bahan yang mungkin diperlukan dalam cleanser Anda: Salicylic acid: BHA yang menembus pori-pori untuk eksfoliasi dan mengatasi jerawat, Glycolic acid: Mengurangi minyak berlebih dan mencegah pori-pori tersumbat, Niacinamide: Mengatur produksi minyak, menyeimbangkan kadar kelembapan, dan membantu mengatasi noda, pori-pori besar, dan warna kulit tidak merata, Benzoyl peroxide: Membantu membersihkan jerawat dan mencegah terbentuknya jerawat baru.",
+        "step": "Basahi wajah dengan air hangat, aplikasikan sedikit cleanser ke tangan Anda, pijat lembut ke wajah dengan gerakan melingkar, terutama di area T-zone, kemudian bilas bersih dengan air hangat, keringkan wajah dengan handuk bersih."
+      },
+      "Moisturizer": {
+        "desc": "Untuk moisturizer, pilihlah yang bebas minyak dan non-comedogenic agar masalah kulit berminyak Anda tidak tetap bertahan.",
+        "ingredients": "Hyaluronic acid: Humektan yang menarik kelembapan dari udara ke kulit tanpa terasa berminyak, Niacinamide: Mengatur produksi minyak, menyeimbangkan kadar kelembapan, dan membantu mengatasi noda, pori-pori besar, dan warna kulit tidak merata, Salicylic acid: BHA yang mengeksfoliasi sel kulit mati dan membersihkan pori-pori, Retinol: Mempercepat pergantian sel untuk mengangkat sel kulit mati dan mencegah pori-pori tersumbat, Aloe vera: Melembapkan dan menenangkan kulit sambil mengurangi risiko jerawat, Sunflower oil: Mengandung asam linoleat yang menghidrasi kulit dan memperkuat penghalang kulit, Glycolic acid: Mengangkat sel kulit mati dan minyak berlebih, Tea tree oil: Memiliki sifat antibakteri yang membantu mengendalikan bakteri penyebab jerawat dan mengurangi peradangan serta kemerahan.",
+        "step": "Bersihkan wajah secara menyeluruh, lalu aplikasikan sedikit moisturizer pada kulit yang lembap, tepuk perlahan hingga produk terserap."
+      },
+      "Serum": {
+        "desc": "Gunakan serum yang mengontrol minyak, membantu mengencangkan pori-pori, melembapkan kulit, dan mencegah jerawat.",
+        "ingredients": "Niacinamide: Mengatur produksi minyak dan menyeimbangkan kadar kelembapan, Salicylic acid: BHA yang mengeksfoliasi sel kulit mati dan membersihkan pori-pori, Tea tree oil: Sifat antibakterinya membantu mengontrol bakteri penyebab jerawat dan mengurangi peradangan serta kemerahan, Glycolic acid: Mengangkat sel kulit mati dan minyak berlebih, Aloe vera: Melembapkan dan menenangkan kulit, Zinc PCA: Membantu mengontrol produksi sebum dan mengurangi pembentukan jerawat, Witch hazel: Astringent alami yang mengencangkan pori-pori dan mengurangi minyak, Retinol: Mempercepat pergantian sel untuk mengangkat sel kulit mati dan mencegah pori-pori tersumbat.",
+        "step": "Bersihkan wajah secara menyeluruh, lalu aplikasikan sedikit serum khusus untuk kulit berminyak ke ujung jari Anda, tepuk-tepuk perlahan ke kulit, terutama pada area yang berminyak."
+      },
+      "Sunscreen": {
+        "desc": "Sunscreen penting untuk melindungi kulit dari sinar UV, tetapi untuk kulit berminyak, gunakan yang bebas minyak dan non-comedogenic.",
+        "ingredients": "Zinc oxide atau titanium dioxide: Bahan aktif yang terdapat pada mineral sunscreen, lebih cocok untuk kulit berminyak karena sifatnya yang mengeringkan. Zinc oxide juga membantu mencegah jerawat dengan mengontrol produksi minyak. Hyaluronic acid: Menarik dan mempertahankan air, melembapkan tanpa membuat kulit terasa berminyak. Non-comedogenic: Diformulasikan agar tidak menyumbat pori-pori.",
+        "step": "Bersihkan wajah secara menyeluruh, aplikasikan moisturizer, kemudian aplikasikan sunscreen, ratakan ke seluruh wajah, leher, dan telinga. Ingat untuk mengulang pemakaian setiap 2-4 jam."
+      },
+      "Toner": {
+        "desc": "Toner sangat baik untuk kulit berminyak. Ia membantu melembapkan dan mengurangi minyak pada kulit Anda.",
+        "ingredients": "Salicylic acid: BHA yang dapat membersihkan pori-pori, mengurangi minyak berlebih, dan mengatasi komedo. Niacinamide: Membantu mengurangi produksi sebum. Benzoic acid: Bahan antifungal dan antibakteri yang membantu mencegah bakteri penyebab jerawat. Alpha hydroxy acids (AHAs): Mengangkat sel kulit mati dan memperbaiki tekstur kulit. Polyhydroxy acid (PHA): Lebih lembut untuk semua jenis kulit, termasuk kulit berminyak. Hyaluronic acid: Menghidrasi kulit secara mendalam. Aloe vera: Sifat antioksidan dan anti-inflamasinya menenangkan kulit.",
+        "step": "Bersihkan wajah secara menyeluruh, gunakan kapas untuk mengaplikasikan toner ke wajah, tuang secukupnya karena toner yang terlalu banyak bisa menyebabkan iritasi, lalu lanjutkan dengan moisturizer."
+      }
+    },
+    "kering": {
+      "Facewash": {
+        "desc": "Face wash untuk kulit kering biasanya mengandung bahan yang melembapkan dan menenangkan kulit tanpa menghilangkan minyak alami.",
+        "ingredients": "Hyaluronic Acid: Humektan alami yang menarik dan mempertahankan kelembapan, membuat kulit terasa kenyal dan terhidrasi. Glycerin: Menarik kelembapan dari lingkungan ke kulit, berfungsi sebagai pelembap yang kuat. Ceramides: Lipid alami yang membantu menjaga penghalang kulit yang sehat, mencegah kehilangan kelembapan. Aloe Vera: Menenangkan dan melembapkan, membantu meredakan iritasi dan kemerahan. Cucumber: Kandungan air yang tinggi memberikan hidrasi yang baik dan menyegarkan kulit.",
+        "step": "1. Basahi wajah Anda dengan air, sebaiknya hangat. 2. Aplikasikan sedikit face wash (jika berbusa, gosokkan sedikit pada tangan). 3. Pijat wajah Anda dengan gerakan melingkar. 4. Bilas hingga bersih dengan air bersih. 5. Lakukan ini dua kali sehari."
+      },
+      "Cleanser": {
+        "desc": "Mirip dengan face wash, cleanser dibutuhkan untuk membersihkan wajah Anda tanpa menghilangkan minyak alami. Anda juga bisa menggunakan micellar water yang cukup melembapkan.",
+        "ingredients": "Hyaluronic Acid: Humektan alami yang menarik dan mempertahankan kelembapan, membuat kulit terasa kenyal dan terhidrasi. Glycerin: Menarik kelembapan dari lingkungan ke kulit, berfungsi sebagai pelembap yang kuat. Ceramides: Lipid alami yang membantu menjaga penghalang kulit yang sehat, mencegah kehilangan kelembapan. Aloe Vera: Menenangkan dan melembapkan, membantu meredakan iritasi dan kemerahan.",
+        "step": "Basahi wajah Anda dengan air hangat, aplikasikan sedikit cleanser pada tangan Anda, pijat lembut ke wajah dengan gerakan melingkar, fokus pada area T-zone, lalu bilas hingga bersih dengan air hangat dan keringkan wajah dengan handuk bersih."
+      },
+      "Moisturizer": {
+        "desc": "Ini adalah kebutuhan utama untuk kulit kering. Melembapkan kulit Anda.",
+        "ingredients": "Humektan: Menarik dan mempertahankan air di kulit, seperti hyaluronic acid, glycerin, dan aloe vera. Emollients: Melumasi kulit untuk mencegah kehilangan air dan meningkatkan tekstur kulit, seperti shea butter, coconut oil, dan ceramides. Occlusives: Membentuk lapisan pelindung di kulit untuk mencegah kehilangan kelembapan, seperti beeswax dan squalane. Urea: Membantu menghidrasi kulit dan mengembalikan kandungan kelembapan. Cucumber: Memiliki kandungan air yang tinggi dan efek melembapkan. Aloe vera: Mengandung vitamin A, C, dan E serta senyawa aktif lainnya.",
+        "step": "Bersihkan wajah Anda dengan menyeluruh, lalu aplikasikan sedikit moisturizer pada kulit yang masih lembap, tepuk-tepuk dengan lembut agar produk meresap."
+      },
+      "Serum": {
+        "desc": "Serum dengan bahan yang menghidrasi diperlukan agar kulit Anda dapat mengatur lebih banyak sebum, membuatnya tidak terlalu kering.",
+        "ingredients": "Hyaluronic Acid: Humektan yang menarik kelembapan ke dalam kulit. Glycerin: Humektan yang menarik dan mengunci kelembapan. Ceramides: Memperkuat penghalang kulit untuk mencegah kehilangan kelembapan. Squalane dan jojoba oil: Emolien yang melembutkan dan menghaluskan kulit. Vitamin E: Antioksidan yang membantu melembutkan kulit. Vitamin C: Meningkatkan pembentukan kolagen, mengurangi kerusakan oksidatif, dan mengurangi hiperpigmentasi. Niacinamide: Membantu mencerahkan warna kulit yang tidak merata dan meredakan peradangan. Peptides: Protein kecil yang dapat membantu mengurangi garis halus dan kerutan.",
+        "step": "Bersihkan wajah Anda dengan menyeluruh, lalu aplikasikan sedikit serum yang diformulasikan khusus untuk kulit kering pada ujung jari Anda, tepuk-tepuk dengan lembut ke kulit."
+      },
+      "Sunscreen": {
+        "desc": "Selain melindungi dari sinar UV, sunscreen Anda juga harus memiliki elemen pelembap.",
+        "ingredients": "Hyaluronic Acid: Komponen kulit alami yang menarik kelembapan. Glycerin: Humektan yang menarik dan mempertahankan kelembapan. Ceramides: Membantu memulihkan penghalang kulit dan mengunci kelembapan. Aloe Vera: Menenangkan dan melembapkan kulit. Shea Butter: Memberikan hidrasi dan melindungi kulit dari sinar UV.",
+        "step": "Bersihkan wajah Anda dengan menyeluruh, aplikasikan moisturizer, aplikasikan sunscreen Anda dan tutupi wajah, leher, dan telinga Anda, gosok hingga merata, ingat untuk mengaplikasikan ulang setiap 2-4 jam."
+      },
+      "Toner": {
+        "desc": "Toner opsional, tetapi pilih yang memiliki bahan menghidrasi.",
+        "ingredients": "Hyaluronic Acid: Menarik molekul air untuk menjaga kulit tetap terhidrasi. Glycerin: Menarik air untuk menjaga kulit tetap terhidrasi dan kenyal. Ceramides: Lipid yang membantu membentuk penghalang kulit dan mempertahankan kelembapan. Aloe Vera: Menenangkan kulit dan membantu hidrasi. Squalane: Minyak ringan yang tidak berminyak dan meniru minyak alami kulit. Borage Oil: Kaya akan asam lemak esensial yang menutrisi dan melembapkan kulit. Niacinamide: Vitamin B3 yang meningkatkan hidrasi kulit dan mencerahkan kulit. Chamomile: Mengurangi kemerahan dan menenangkan iritasi.",
+        "step": "Bersihkan wajah Anda dengan menyeluruh, gunakan kapas untuk mengaplikasikan toner ke wajah Anda, tuangkan dengan bijak karena terlalu banyak toner dapat menyebabkan iritasi, lanjutkan dengan moisturizer."
+      }
+    },
+    "normal": {
+      "Facewash": {
+        "desc": "Face wash untuk kulit normal bertujuan menjaga keseimbangan kelembapan dan membersihkan kulit secara efektif.",
+        "ingredients": "Glycerin: Membantu menjaga kelembapan kulit. Aloe Vera: Menenangkan dan melembapkan kulit. Vitamin C: Membantu mencerahkan kulit dan melawan kerusakan oksidatif. Niacinamide: Mendukung keseimbangan produksi sebum dan meningkatkan kecerahan kulit. Chamomile: Memberikan efek menenangkan dan membantu meredakan iritasi ringan.",
+        "step": "1. Basahi wajah Anda dengan air hangat. 2. Aplikasikan sedikit face wash di telapak tangan Anda. 3. Pijat wajah Anda dengan gerakan melingkar. 4. Bilas hingga bersih dan keringkan dengan handuk bersih."
+      },
+      "Cleanser": {
+        "desc": "Cleanser untuk kulit normal harus membersihkan kotoran dan sisa makeup tanpa mengganggu keseimbangan alami kulit.",
+        "ingredients": "Glycerin: Menarik dan mempertahankan kelembapan. Ceramides: Memperkuat penghalang kulit. Aloe Vera: Menenangkan dan melembapkan. Vitamin E: Memberikan hidrasi dan perlindungan antioksidan.",
+        "step": "1. Aplikasikan cleanser pada wajah yang lembap. 2. Pijat lembut dengan gerakan melingkar. 3. Bilas hingga bersih dengan air hangat. 4. Gunakan pagi dan malam hari."
+      },
+      "Moisturizer": {
+        "desc": "Moisturizer untuk kulit normal menjaga hidrasi dan membantu kulit tetap sehat dan bercahaya.",
+        "ingredients": "Hyaluronic Acid: Menarik kelembapan untuk menjaga hidrasi. Squalane: Emolien yang meniru minyak alami kulit. Ceramides: Memperkuat penghalang kulit. Vitamin E: Antioksidan yang membantu melembutkan kulit. Jojoba Oil: Minyak ringan yang membantu menyeimbangkan kelembapan.",
+        "step": "1. Aplikasikan pada kulit yang masih lembap setelah membersihkan wajah. 2. Tepuk-tepuk lembut agar produk meresap."
+      },
+      "Serum": {
+        "desc": "Serum untuk kulit normal membantu menjaga elastisitas dan kecerahan kulit sambil mencegah tanda-tanda penuaan.",
+        "ingredients": "Vitamin C: Meningkatkan kecerahan dan melindungi dari kerusakan lingkungan. Niacinamide: Mendukung keseimbangan produksi minyak. Hyaluronic Acid: Menyediakan hidrasi mendalam. Peptides: Membantu memperkuat elastisitas kulit. Retinol (dalam jumlah kecil): Meningkatkan regenerasi sel kulit.",
+        "step": "1. Gunakan setelah toner dan sebelum moisturizer. 2. Aplikasikan 2-3 tetes serum di wajah. 3. Tepuk-tepuk dengan lembut hingga meresap."
+      },
+      "Sunscreen": {
+        "desc": "Sunscreen untuk kulit normal melindungi dari kerusakan UV tanpa menyebabkan kekeringan atau minyak berlebih.",
+        "ingredients": "Zinc Oxide: Memberikan perlindungan fisik terhadap sinar UV. Aloe Vera: Menenangkan dan melembapkan kulit. Vitamin E: Memberikan perlindungan antioksidan. Glycerin: Menjaga kelembapan kulit. Niacinamide: Membantu menenangkan kulit.",
+        "step": "1. Aplikasikan secara merata pada wajah, leher, dan telinga setelah pelembap. 2. Pastikan untuk reapply setiap 2-4 jam jika berada di luar ruangan."
+      },
+      "Toner": {
+        "desc": "Toner membantu menjaga keseimbangan pH dan menyiapkan kulit untuk produk selanjutnya.",
+        "ingredients": "Witch Hazel: Membersihkan pori-pori tanpa menghilangkan minyak alami. Aloe Vera: Menenangkan dan melembapkan. Chamomile: Mengurangi kemerahan dan iritasi. Niacinamide: Membantu mencerahkan kulit. Hyaluronic Acid: Menarik kelembapan untuk hidrasi tambahan.",
+        "step": "1. Setelah membersihkan wajah, tuangkan toner pada kapas. 2. Usapkan lembut pada wajah dan leher. 3. Tunggu hingga kering sebelum melanjutkan ke serum atau pelembap."
+      }
+    }
+  }
+  
