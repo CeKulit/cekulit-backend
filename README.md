@@ -61,3 +61,4 @@ python main.py
 
 - Maximum file upload size: 1MB
 - Supported file types: PNG, JPG, JPEG
+- Don't forget to add model/(your own data).pth
