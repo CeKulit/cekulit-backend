@@ -5,9 +5,9 @@
         "version": "1.0.0",
         "description": "API for predicting skin type from uploaded images"
     },
-    "host": "localhost:5000",
+    "host": "https://cekulit.publicvm.com",
     "basePath": "/",
-    "schemes": ["http"],
+    "schemes": ["https"],
     "paths": {
         "/predict": {
             "post": {
