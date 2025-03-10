@@ -38,6 +38,7 @@ jobs:
           gcloud run deploy $SERVICE_NAME \
             --image gcr.io/$PROJECT_ID/$SERVICE_NAME:${{ github.sha }} \
             --platform managed \
+            --memory 8Gi \
             --region $REGION \
             --allow-unauthenticated \
             --set-env-vars "BUCKET_NAME=${{ secrets.BUCKET_NAME }},UPLOAD_FOLDER=uploads/,MODEL_PATH=${{ secrets.MODEL_PATH }}" \
