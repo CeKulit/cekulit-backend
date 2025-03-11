@@ -5,7 +5,7 @@ from app.config import Config
 import logging
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder='../templates', static_folder='../static')
     
     # Setup logging
     logging.basicConfig(

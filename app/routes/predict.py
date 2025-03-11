@@ -14,7 +14,7 @@ thread_pool = ThreadPoolExecutor(max_workers=2)
 
 @predict_bp.route("/")
 def index():
-    return render_template("templates/index.html")
+    return render_template("index.html")
 
 @predict_bp.route("/predict", methods=["POST"])
 def predict():
