@@ -4,7 +4,7 @@ from app.services.storage import storage_service
 from app.utils.image import validate_file, get_image_hash
 from concurrent.futures import ThreadPoolExecutor
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 import logging
 
 logger = logging.getLogger(__name__)
@@ -50,7 +50,7 @@ def predict():
                 "confidenceScore": prediction["confidence"],
                 "isAboveThreshold": prediction["confidence"] > 0.5,
                 "description": prediction["description"],
-                "createdAt": datetime.now(datetime.timezone.utc).isoformat() + "Z",
+                "createdAt": datetime.now(timezone.utc).isoformat() + "Z",
                 "imageUrl": image_url,
                 "imageHash": image_hash
             }

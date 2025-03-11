@@ -1,7 +1,7 @@
 from google.cloud import storage
 from app.config import Config
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +16,7 @@ class StorageService:
             blob = self.bucket.blob(blob_name)
             blob.metadata = {
                 "prediction_id": filename.split(".")[0],
-                "uploaded_at": datetime.now(datetime.timezone.utc).isoformat()
+                "uploaded_at": datetime.now(timezone.utc).isoformat()
             }
             blob.upload_from_string(file_data, content_type="image/jpeg")
             blob.make_public()
