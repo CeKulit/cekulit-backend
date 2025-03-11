@@ -19,7 +19,6 @@ class StorageService:
                 "uploaded_at": datetime.now(timezone.utc).isoformat()
             }
             blob.upload_from_string(file_data, content_type="image/jpeg")
-            blob.make_public()
             logger.info(f"Uploaded file to {blob_name}")
             return blob.public_url
         except Exception as e:
