@@ -50,7 +50,7 @@ def predict():
                 "confidenceScore": prediction["confidence"],
                 "isAboveThreshold": prediction["confidence"] > 0.5,
                 "description": prediction["description"],
-                "createdAt": datetime.utcnow().isoformat() + "Z",
+                "createdAt": datetime.now(datetime.timezone.utc).isoformat() + "Z",
                 "imageUrl": image_url,
                 "imageHash": image_hash
             }
