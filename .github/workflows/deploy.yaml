@@ -1,4 +1,4 @@
-name: Deploy to Cloud Run
+name: Deploy Nginx to Cloud Run
 
 on:
   push:
@@ -9,6 +9,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   SERVICE_NAME: cekulit-predict
   REGION: asia-southeast1
+  REPOSITORY: gcr.io
 
 jobs:
   deploy:
@@ -26,20 +27,27 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Configure Docker
-        run: gcloud auth configure-docker
+        run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
+
+      - name: Create SSL directory and write certificates
+        run: |
+          mkdir -p nginx-proxy/ssl
+          echo "${{ secrets.SSL_FULLCHAIN_PEM }}" > nginx-proxy/ssl/fullchain.pem
+          echo "${{ secrets.SSL_PRIVKEY_PEM }}" > nginx-proxy/ssl/privkey.pem
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t gcr.io/$PROJECT_ID/$SERVICE_NAME:${{ github.sha }} .
-          docker push gcr.io/$PROJECT_ID/$SERVICE_NAME:${{ github.sha }}
+          cd nginx-proxy
+          docker build -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest .
+          docker push ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy $SERVICE_NAME \
-            --image gcr.io/$PROJECT_ID/$SERVICE_NAME:${{ github.sha }} \
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest \
             --platform managed \
-            --memory 4Gi \
-            --region $REGION \
+            --memory 2Gi \
+            --region ${{ env.REGION }} \
             --allow-unauthenticated \
-            --set-env-vars "BUCKET_NAME=${{ secrets.BUCKET_NAME }},UPLOAD_FOLDER=uploads/,MODEL_PATH=${{ secrets.MODEL_PATH }}" \
+            --set-env-vars "BUCKET_NAME=${{ secrets.BUCKET_NAME }},UPLOAD_FOLDER=uploads/,MODEL_PATH=${{ secrets.MODEL_PATH }},FLASK_ENV=production" \
             --service-account ${{ secrets.GCP_SA_EMAIL }}

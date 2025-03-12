@@ -15,14 +15,14 @@ class StorageService:
             blob_name = f"{Config.UPLOAD_FOLDER}{filename}"
             blob = self.bucket.blob(blob_name)
             blob.metadata = {
-                "prediction_id": filename.split(".")[0],
+                "prediction_id": filename.split(".")[0].replace("skin_type_prediction_", ""),
                 "uploaded_at": datetime.now(timezone.utc).isoformat()
             }
             blob.upload_from_string(file_data, content_type="image/jpeg")
-            logger.info(f"Uploaded file to {blob_name}")
+            logger.info("File uploaded to GCS: %s", blob_name)
             return blob.public_url
         except Exception as e:
-            logger.error(f"Failed to upload to GCS: {e}")
+            logger.error("Failed to upload to GCS: %s", str(e))
             raise
 
 storage_service = StorageService()
