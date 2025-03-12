@@ -29,12 +29,6 @@ jobs:
       - name: Configure Docker
         run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
 
-      - name: Create SSL directory and write certificates
-        run: |
-          mkdir -p nginx-proxy/ssl
-          echo "${{ secrets.SSL_FULLCHAIN_PEM }}" > nginx-proxy/ssl/fullchain.pem
-          echo "${{ secrets.SSL_PRIVKEY_PEM }}" > nginx-proxy/ssl/privkey.pem
-
       - name: Build and Push Docker Image
         run: |
           docker build -f nginx-proxy/Dockerfile -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest .
