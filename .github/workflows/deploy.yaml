@@ -1,4 +1,4 @@
-name: Deploy Nginx to Cloud Run
+name: Deploy Predict to Cloud Run
 
 on:
   push:
@@ -26,18 +26,26 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
 
+      - name: Create Artifact Registry Repository if not exists
+        run: |
+          if ! gcloud artifacts repositories describe ${{ env.REPOSITORY }} \
+            --location=${{ env.REGION }} \
+            --project=${{ env.PROJECT_ID }} > /dev/null 2>&1; then
+            echo "Repository ${{ env.REPOSITORY }} not found, creating it..."
+            gcloud artifacts repositories create ${{ env.REPOSITORY }} \
+              --repository-format=docker \
+              --location=${{ env.REGION }} \
+              --project=${{ env.PROJECT_ID }} \
+              --description="Repository for cekulit services"
+          else
+            echo "Repository ${{ env.REPOSITORY }} already exists"
+          fi
+
       - name: Configure Docker
         run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
 
-      - name: Create SSL directory and write certificates
-        run: |
-          mkdir -p nginx-proxy/ssl
-          echo "${{ secrets.SSL_FULLCHAIN_PEM }}" > nginx-proxy/ssl/fullchain.pem
-          echo "${{ secrets.SSL_PRIVKEY_PEM }}" > nginx-proxy/ssl/privkey.pem
-
       - name: Build and Push Docker Image
         run: |
-          cd nginx-proxy
           docker build -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest .
           docker push ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest
 
