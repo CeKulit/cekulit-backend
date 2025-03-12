@@ -3,7 +3,7 @@ name: Deploy cekulit-auth to Cloud Run
 on:
   push:
     branches:
-      - dev-auth
+      - auth
 jobs:
   deploy:
     runs-on: ubuntu-latest
