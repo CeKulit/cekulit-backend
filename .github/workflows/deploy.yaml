@@ -9,7 +9,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   SERVICE_NAME: cekulit-predict
   REGION: asia-southeast1
-  REPOSITORY: gcr.io
+  REPOSITORY: cekulit
 
 jobs:
   deploy:
