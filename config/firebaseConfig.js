@@ -11,12 +11,25 @@ const logger = winston.createLogger({
   transports: [new winston.transports.Console()],
 });
 
+function getFirebaseCredentials() {
+  if (process.env.SERVICE_ACCOUNT) {
+    try {
+      const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT);
+      return admin.credential.cert(serviceAccount);
+    } catch (error) {
+      logger.error("Error parsing SERVICE_ACCOUNT from env:", error);
+      throw new Error("Invalid SERVICE_ACCOUNT JSON");
+    }
+  }
+
+  return admin.credential.applicationDefault();
+}
+
 try {
   const firebaseConfig = {
-    credential: admin.credential.applicationDefault(),
+    credential: getFirebaseCredentials(),
   };
 
-  // Only add databaseURL if it exists and is valid
   if (process.env.DB_URL) {
     firebaseConfig.databaseURL = process.env.DB_URL;
   }

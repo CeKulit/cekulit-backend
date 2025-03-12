@@ -34,5 +34,5 @@ jobs:
             --platform managed \
             --region asia-southeast1 \
             --allow-unauthenticated \
-            --set-env-vars "NODE_ENV=production,EMAIL_USER=${{ secrets.EMAIL_USER }},EMAIL_PASS=${{ secrets.EMAIL_PASS }},BUCKET_NAME=${{ secrets.BUCKET_NAME }}" \
+            --set-env-vars "NODE_ENV=production,EMAIL_USER=${{ secrets.EMAIL_USER }},EMAIL_PASS=${{ secrets.EMAIL_PASS }},BUCKET_NAME=${{ secrets.BUCKET_NAME }},SECRET_KEY=${{ secrets.SECRET_KEY }}" \
             --service-account ${{ secrets.GCP_SA_EMAIL }}
