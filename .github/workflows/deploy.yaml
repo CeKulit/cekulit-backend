@@ -39,7 +39,7 @@ jobs:
           gcloud run deploy ${{ env.SERVICE_NAME }} \
             --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest \
             --platform managed \
-            --memory 1Gi \
+            --memory 1.5Gi \
             --region ${{ env.REGION }} \
             --allow-unauthenticated \
             --set-env-vars "BUCKET_NAME=${{ secrets.BUCKET_NAME }},UPLOAD_FOLDER=uploads/,MODEL_PATH=${{ secrets.MODEL_PATH }},FLASK_ENV=production" \
