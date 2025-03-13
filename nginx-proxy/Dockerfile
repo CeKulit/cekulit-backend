@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY nginx-proxy/nginx.conf /etc/nginx/nginx.conf
+COPY nginx-proxy/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
