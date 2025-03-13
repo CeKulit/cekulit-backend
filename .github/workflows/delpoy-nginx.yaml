@@ -40,4 +40,5 @@ jobs:
             --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:latest \
             --platform managed \
             --region ${{ env.REGION }} \
-            --allow-unauthenticated
+            --allow-unauthenticated \
+            --port 80
